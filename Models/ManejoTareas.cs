@@ -9,8 +9,8 @@ namespace tl2_tp07_2023_TomasDLV.Models
             accesoTarea = new AccesoTarea();
             tareas = accesoTarea.Obtener();
         }
-        public bool crearTarea(int id,string titulo,string descripcion,string estado){
-            var tarea = new Tarea(id,titulo,descripcion,estado);
+        public bool crearTarea(Tarea tarea){
+            
             tareas.Add(tarea);
             if (accesoTarea.Guardar(tareas))
             {
@@ -54,29 +54,19 @@ namespace tl2_tp07_2023_TomasDLV.Models
             }
             return false;
         }
-        public void listarTareas(){
-            foreach (Tarea t in tareas)
-            {
-                Console.WriteLine("");
-                Console.WriteLine("----- Tarea ID : ",t.Id," -----");
-                Console.WriteLine("Titulo: ",t.Titulo);
-                Console.WriteLine("Descripcion: ", t.Descripcion);
-                Console.WriteLine("Estado: ", t.Estado);
-                Console.WriteLine("");
-            }
+        public List<Tarea> listarTareas(){
+            return tareas;
         }
-        public void listarTareasCompletadas(){
+        public List<Tarea> listarTareasCompletadas(){
+            List<Tarea> tareasCompletas = new List<Tarea>();
             foreach (Tarea t in tareas)
             {
                 if (t.Estado == "Completada")
                 {
-                    Console.WriteLine("");
-                    Console.WriteLine("----- Tarea ID : ",t.Id," -----");
-                    Console.WriteLine("Titulo: ",t.Titulo);
-                    Console.WriteLine("Descripcion: ", t.Descripcion);
-                    Console.WriteLine("");
+                    tareasCompletas.Add(t);
                 }
             }
+            return tareasCompletas;
         }
     }
 }

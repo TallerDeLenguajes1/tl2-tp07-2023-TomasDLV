@@ -1,20 +1,32 @@
 [
     {
-      "Id": 1,
-      "Titulo": "Hacer compras",
-      "Descripcion": "Comprar leche, pan y huevos",
-      "Status": "Pendiente"
+        "Id": 1,
+        "Titulo": "Hacer compras",
+        "Descripcion": "Comprar leche, pan y huevos",
+        "Estado": null
     },
     {
-      "Id": 2,
-      "Titulo": "Limpiar casa",
-      "Descripcion": "Barrer y trapear el suelo",
-      "Estado": "En progreso"
+        "Id": 2,
+        "Titulo": "Limpiar casa",
+        "Descripcion": "Barrer y trapear el suelo",
+        "Estado": "En progreso"
     },
     {
-      "Id": 3,
-      "Titulo": "Preparar cena",
-      "Descripcion": "Hacer pasta con salsa de tomate",
-      "Estado": "Completada"
+        "Id": 3,
+        "Titulo": "Preparar cena",
+        "Descripcion": "Hacer pasta con salsa de tomate",
+        "Estado": "Completada"
+    },
+    {
+        "Id": 4,
+        "Titulo": "Limpieza ba\u00F1o",
+        "Descripcion": "Ba\u00F1o 3 , edificio 1",
+        "Estado": "Pendiente"
+    },
+    {
+        "Id": 5,
+        "Titulo": "string",
+        "Descripcion": "string",
+        "Estado": "string"
     }
-  ]
+]
